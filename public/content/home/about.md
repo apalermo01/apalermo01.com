@@ -1,9 +1,3 @@
-# Headline
-
-Full Stack Data Developer | Python & SQL Expert | Passionate About Technology and Lifelong Learning
-
-# About Me
-
 Hello, Internet! My name is Alex, and I’ve spent the last 4+ years working in
 tech in roles ranging from startup founder and advisor to full-stack data
 developer.

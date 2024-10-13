@@ -1,15 +1,18 @@
 import React from 'react';
-import MarkdownComponent  from "./components/MarkdownComponent";
 import './App.css';
+import Headline from "./components/Headline"
+import Socials from "./components/Socials"
+import About from "./components/About"
 
 const App: React.FC = () => {
   return (
-    <div className="Test">
-    <MarkdownComponent 
-      fileName = "/content/home.md"
-      sectionName = "Headline"
-      delimiter = "h1"
-    />
+    <div className="homepage">
+      <Socials /> 
+      <div className="siteTitle">Alex Palermo</div>
+      <div className="contentContainer">
+        <Headline />
+        <About />
+      </div>
     </div>
   )
 }
