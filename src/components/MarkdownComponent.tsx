@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { marked } from "marked";
+import fm, { FrontMatterResult } from 'front-matter';
 
+export interface markdownContent {
+  content: string;
+  frontMatter: Record<string, any>;
+}
 
-async function parseMarkdown(file: string): Promise<string> {
+export async function parseMarkdown(file: string): Promise<markdownContent> {
+
+  const content: markdownContent = {
+    content: '',
+    frontMatter: {}
+  };
+
   try {
     const response = await fetch(file);
     if (!response.ok) {
@@ -10,28 +21,22 @@ async function parseMarkdown(file: string): Promise<string> {
     }
 
     const text = await response.text();
-    const markdownContent = await marked(text);
-    
-    return markdownContent;
-    // Use regex to capture content between the heading delimiters
-    //const regex = new RegExp(`<${delimiter}[^>]*>${sectionTitle}</${delimiter}>([\\s\\S]*?)(<h[1-6]>)`, "i");
-    //const match = markdownContent.match(regex);
+    const parsed: FrontMatterResult<any> = fm(text);
+    content.frontMatter = parsed.attributes;
+    content.content = await marked(parsed.body);
 
-    //if (match && match[1]) {
-      //return match[1].trim();
-    //} else {
-      //throw new Error(`Section with title "${sectionTitle}" and delimiter "${delimiter}" not found.`);
-    //}
+    
+    return content
   } catch (error) {
     console.error(error);
-    return '';
+    return content;
   }
 }
 
-interface markdownContent  {
+interface markdownInfo  {
   fileName: string;
 }
-const MarkdownContainer: React.FC<markdownContent> = ({fileName}: markdownContent) => {
+const MarkdownContainer: React.FC<markdownInfo> = ({fileName}: markdownInfo) => {
   
   
   const [content, setContent] = useState<string>("");
@@ -39,7 +44,7 @@ const MarkdownContainer: React.FC<markdownContent> = ({fileName}: markdownConten
   useEffect(() => {
     const runParser = async () => {
       const result = await parseMarkdown(fileName,);
-      setContent(result);
+      setContent(result.content);
     };
 
     runParser();

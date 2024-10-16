@@ -6,6 +6,7 @@ import About from "../components/About"
 
 const Home: React.FC = () => {
   return (
+    <>
     <div className="homepage">
       <Socials /> 
       <div className="siteTitle">Alex Palermo</div>
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
         <About />
       </div>
     </div>
+    </>
   )
 }
 

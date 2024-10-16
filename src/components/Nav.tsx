@@ -5,16 +5,18 @@ import "./styles.css";
 const Nav: React.FC = () => {
   return (
     <>
+      <div className='navSection'>
       <nav>
-        <ul>
-          <li>
-            <Link to="/projects">Projects</Link>
+        <ul className='navList'>
+          <li className='navLink'>
+            <Link to="/">About</Link>
           </li>
-          <li>
-            Projects 
+          <li className='navLink'>
+            <Link to="/projects">Projects</Link>
           </li>
         </ul>
       </nav>
+      </div>
     </>
   )
 }

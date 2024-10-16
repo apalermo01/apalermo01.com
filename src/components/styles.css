@@ -1,3 +1,23 @@
+.navList {
+  background-image: linear-gradient(to right, #a6e3a1, #89b4fa); /* same as App.tsx, may want to re-arrange */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navSection {
+  width: 100%;
+  text-align: center;
+}
+
+.navLink {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 16px;
+}
+
 .boxStyle {
   border-color: #f38ba8;
   /*border-image: linear-gradient(to bottom, #cba6f7, #f9e2af);*/
