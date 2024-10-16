@@ -19,17 +19,17 @@ const ProjectContainer: React.FC<projectData> = ({name}) => {
   const projectBody: string = content.content;
   const projectAttrs: Record<string, any> = content.frontMatter;
 
-  const projectName = projectAttrs.name ? projectAttrs.name : 'Could not load project name';
-  const projectUrl = projectAttrs.url ? projectAttrs.url : 'Could not load url';
+  const projectName = projectAttrs.Name ? projectAttrs.Name : 'Could not load project name';
+  const projectUrl = projectAttrs.Link ? projectAttrs.Link : 'Could not load url';
+  const projectImage = projectAttrs.ImageUrl ? projectAttrs.ImageUrl : 'Could not find image url';
 
   return (
-    <>
-      <p>{projectName}</p>
-      <p>{projectUrl}</p>
-      <div>
+    <div className='boxStyle'>
+      <h2 className = 'projectName'>{projectName}</h2>
+      <div className='projectDescription'>
         {content ? <div dangerouslySetInnerHTML={{__html: projectBody}} /> : <p>Loading...</p>}
       </div>
-    </>
+    </div>
   )
 }
 
