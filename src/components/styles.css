@@ -185,10 +185,18 @@
 /* Projects */
 .projectPage {
   display: grid;
+  color: var(--ctp-latte-crust);
   grid-template-columns: 1fr 1fr;
 }
 
 .projectName {
   text-align: center;
   font-size: 1.5rem;
+}
+
+.projectImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
