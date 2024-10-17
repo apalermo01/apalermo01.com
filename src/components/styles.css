@@ -134,7 +134,7 @@
 }
 
 .boxStyle:hover {
-  border-color: #cba6f7;
+  border-color: var(--ctp-latte-green);
   box-shadow: 10px 10px 10px 10px rbga(116, 199, 236, 1);
 }
 
@@ -183,6 +183,12 @@
 
 
 /* Projects */
+.projectDescription {
+  color: var(--ctp-latte-crust);
+  text-align: center;
+  padding: 50px;
+}
+
 .projectPage {
   display: grid;
   color: var(--ctp-latte-crust);
@@ -191,7 +197,7 @@
 
 .projectName {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .projectImage {
