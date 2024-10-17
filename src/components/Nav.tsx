@@ -1,24 +1,38 @@
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./styles.css";
 
 const Nav: React.FC = () => {
-  return (
-    <>
-      <div className='navSection'>
-      <nav>
-        <ul className='navList'>
-          <li className='navLink'>
-            <Link to="/">About</Link>
-          </li>
-          <li className='navLink'>
-            <Link to="/projects">Projects</Link>
-          </li>
-        </ul>
-      </nav>
-      </div>
-    </>
-  )
-}
+  const navItems = [
+    {
+      path: '/',
+      name: 'About'
+    },
+    {
+      path: '/projects',
+      name: 'Projects'
+    }
+  ];
 
-export default Nav
+  return (
+    <nav className='navSection'>
+      <ul className='navList'>
+        {
+          navItems.map((value, index) => (
+              <NavLink
+                to={value.path}
+                className={({ isActive }) => (isActive ? 'navLink activeLink' : 'navLink inactiveLink')}
+              >
+            <li>
+                {value.name}
+            </li>
+              </NavLink>
+          ))
+        }
+      </ul>
+    </nav>
+  );
+};
+
+export default Nav;
