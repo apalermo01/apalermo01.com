@@ -19,14 +19,14 @@ const Nav: React.FC = () => {
     <nav className='navSection'>
       <ul className='navList'>
         {
-          navItems.map((value, index) => (
+          navItems.map((value) => (
               <NavLink
                 to={value.path}
                 className={({ isActive }) => (isActive ? 'navLink activeLink' : 'navLink inactiveLink')}
               >
-            <li>
+              <li>
                 {value.name}
-            </li>
+              </li>
               </NavLink>
           ))
         }

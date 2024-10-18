@@ -26,3 +26,6 @@ to continually learn, explore, and master all areas of tech.
 This site will serve as a place to document what I’m learning, showcase my
 projects, and share knowledge. I hope anyone who stumbles upon it finds
 something useful, inspiring, or valuable.
+
+If you're interested in chatting, please don't hesitate to reach out on
+LinkedIn.

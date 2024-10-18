@@ -1,6 +1,7 @@
 import React from 'react';
 import './projects.css';
 import ProjectContainer from '../components/ProjectContainer';
+import Socials from "../components/Socials"
 
 const projectList = [
   'knowledge_base',
@@ -14,19 +15,20 @@ const projectList = [
 const Projects: React.FC = () => {
 
   return (
-  <>
-    <div className="siteTitle">Projects</div>
-    <div className="projectDescription">
+  <div className="pageContainer">
+    <Socials />
+    <div className="pageTitle">Projects</div>
+    <div className="projectPageDescription">
        Here are some things that I've built in the past and that I'm building right now. 
     </div>
-      <div className='projectPage'>
+      <div className='projectList'>
         {projectList.map((e) => (
         <div className='projectWrapper'>
           <ProjectContainer name={`content/projects/${e}.md`} />
         </div>
       ))}
     </div>
-  </>
+  </div>
   )
 }
 

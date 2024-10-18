@@ -6,16 +6,14 @@ import About from "../components/About"
 
 const Home: React.FC = () => {
   return (
-    <>
-    <div className="homepage">
+    <div className="pageContainer">
       <Socials /> 
-      <div className="siteTitle">Alex Palermo</div>
+      <div className="pageTitle">Alex Palermo</div>
       <div className="contentContainer">
         <Headline />
         <About />
       </div>
     </div>
-    </>
   )
 }
 
