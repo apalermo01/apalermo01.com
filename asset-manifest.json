@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.543b68db.css",
+    "main.js": "/static/js/main.b9f06104.js",
+    "static/js/453.c83cd304.chunk.js": "/static/js/453.c83cd304.chunk.js",
+    "static/media/headshot_202105.jpg": "/static/media/headshot_202105.0e449c6f5248bf748347.jpg",
+    "static/media/github-mark-white.svg": "/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
+    "index.html": "/index.html",
+    "main.543b68db.css.map": "/static/css/main.543b68db.css.map",
+    "main.b9f06104.js.map": "/static/js/main.b9f06104.js.map",
+    "453.c83cd304.chunk.js.map": "/static/js/453.c83cd304.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.543b68db.css",
+    "static/js/main.b9f06104.js"
+  ]
+}
