@@ -36,6 +36,7 @@ export async function parseMarkdown(file: string): Promise<markdownContent> {
 interface markdownInfo  {
   fileName: string;
 }
+
 const MarkdownContainer: React.FC<markdownInfo> = ({fileName}: markdownInfo) => {
   
   

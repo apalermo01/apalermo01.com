@@ -4,6 +4,7 @@ import {parseMarkdown, markdownContent} from './MarkdownComponent';
 interface projectData {
   name: string;
 }
+
 const ProjectContainer: React.FC<projectData> = ({name}) => {
 
   const [content, setContent] = useState<markdownContent>({'content': '', 'frontMatter': {}});
