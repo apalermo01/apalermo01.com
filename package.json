@@ -1,7 +1,7 @@
 {
   "name": "apalermo01.com-react",
   "version": "0.1.0",
-  "homepage": "https://apalermo01.github.io",
+  "homepage": "https://apalermo01.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

@@ -129,7 +129,7 @@ a, a:hover, a:visited, a:focus, a:active {
 /* homepage */
 .headlineContainer {
   display: grid;
-  grid-template-columns: 0rem 1fr;
+  grid-template-columns: 0.1fr 1fr;
   text-align: center;
   font-size: 2rem;
 }
@@ -202,6 +202,36 @@ a, a:hover, a:visited, a:focus, a:active {
 
 @media (max-width: 1000px) {
   .headlineContainer {
+    text-align: center;
+  }
+
+  .headline {
+    font-size: 1.5rem;
+    margin: auto
+  }
+
+  .headshot {
+    margin: auto
+  }
+
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .projectList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    transition: color 0.3s ease;
+  }
+
+  .projectDescription {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .headlineContainer {
     display: block;
     text-align: center;
   }
@@ -224,6 +254,10 @@ a, a:hover, a:visited, a:focus, a:active {
     grid-template-columns: 1fr;
     gap: 20px;
     transition: color 0.3s ease;
+  }
+
+  .projectDescription {
+    padding: 10px;
   }
 }
 
