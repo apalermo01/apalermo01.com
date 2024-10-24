@@ -24,6 +24,10 @@ jobs:
   
     - name: Build
       run: npm run build
+
+    - run: ls
+    - run: ls build/
+
     - name: Copy files via ssh
       uses: appleboy/scp-action@master
       with:
@@ -31,7 +35,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.PASSWORD }}
-        source: "/build/"
+        source: "build/"
         target: "/var/www/html/"
     # - run: ls
 
