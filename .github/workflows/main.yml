@@ -1,4 +1,4 @@
-name: deploy to GCP
+name: deploy to server
 
 on:
   push:
@@ -7,30 +7,26 @@ on:
 
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #
-  #   steps:
-  #   - name: Checkout code
-  #     uses: actions/checkout@v2
-  #
-  #   - name: Setup Node.js environment
-  #     uses: actions/setup-node@v2
-  #     with:
-  #       node-version: '20'
-  #
-  #   - name: Install dependencies
-  #     run: npm install
-  #
-  #   - name: Build
-  #     run: npm run build
-
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+  
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+  
+    - name: Install dependencies
+      run: npm install
+  
+    - name: Build
+      run: npm run build
+
+    - run: ls
+    - run: ls build/
 
     - name: Copy files via ssh
       uses: appleboy/scp-action@master
@@ -39,8 +35,40 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.PASSWORD }}
-        source: "."
-        target: "/root/"
+        source: "build/"
+        target: "/var/www/html/"
+    # - run: ls
+
+    # - name: upload build
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: artifact
+    #     path: build/
+
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #   - run: ls
+  
+  #   - name: download build
+  #     uses: actions/download-artifact@master
+  #     with:
+  #       name: artifact
+  #       path: build/
+  #   - run: ls
+  #   - name: Checkout code
+  #     uses: actions/checkout@v2
+
+  #   - name: Copy files via ssh
+  #     uses: appleboy/scp-action@master
+  #     with:
+  #       host: ${{ secrets.HOST }}
+  #       username: ${{ secrets.USERNAME }}
+  #       key: ${{ secrets.SSH_KEY }}
+  #       password: ${{ secrets.PASSWORD }}
+  #       source: "/build/"
+  #       target: "/var/www/html/"
 
     # - name: Execute commands on the server
     #   uses: appleboy/ssh-action@master
