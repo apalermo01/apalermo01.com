@@ -42,14 +42,14 @@ jobs:
         source: "."
         target: "/root/"
 
-    - name: Execute commands on the server
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        password: ${{ secrets.PASSWORD }}
-        script: |
-          cd /root/
-          sudo docker compose up --build
+    # - name: Execute commands on the server
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.HOST }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.SSH_KEY }}
+    #     password: ${{ secrets.PASSWORD }}
+    #     script: |
+    #       cd /root/
+    #       sudo docker compose up --build
 
