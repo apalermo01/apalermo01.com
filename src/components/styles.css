@@ -202,17 +202,17 @@ a, a:hover, a:visited, a:focus, a:active {
 
 @media (max-width: 1000px) {
   .headlineContainer {
-    flex-direction: column;
+    display: block;
     text-align: center;
   }
 
   .headline {
-    margin-left: 20%;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: auto
   }
 
   .headshot {
-    margin-bottom: 20px;
+    margin: auto
   }
 
   .pageTitle {
