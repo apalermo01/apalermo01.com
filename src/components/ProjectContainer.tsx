@@ -28,7 +28,7 @@ const ProjectContainer: React.FC<projectData> = ({name}) => {
     <div className='boxStyle'>
     <a href={projectUrl} target="_blank" rel="noopener noreferrer">
       <h2 className='projectName'>{projectName}</h2>
-      <img src = {projectImage} className='projectImage' alt="Project Image"/>
+      <img src = {projectImage} className='projectImage' alt="Some visual related to the project"/>
       <div className='projectDescription'>
         {content ? <div dangerouslySetInnerHTML={{__html: projectBody}} /> : <p>Loading...</p>}
       </div>
