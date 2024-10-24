@@ -9,7 +9,6 @@ COPY tsconfig.json /app/
 
 RUN npm install
 COPY . .
-RUN npm run build
 
 # Apache
 FROM httpd:2.4.62 as apache 
