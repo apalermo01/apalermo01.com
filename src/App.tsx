@@ -1,7 +1,8 @@
 import React from 'react';
-import Home from './home/Home'
-import Projects from './projects/Projects'
-import Nav from "./global/Nav"
+import Home from './components/home/Home'
+import Projects from './components/projects/Projects'
+import Nav from "./components/global/Nav"
+import Socials from "./components/global/Socials"
 
 import {
   BrowserRouter,
@@ -14,6 +15,7 @@ const App: React.FC = () => {
     <>
     <BrowserRouter>
       <Nav />
+      <Socials />
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/projects" element={<Projects />} />

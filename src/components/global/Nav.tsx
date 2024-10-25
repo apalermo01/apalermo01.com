@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import "./styles.css";
+import "./globalStyles.css";
 
 const Nav: React.FC = () => {
   const navItems = [
