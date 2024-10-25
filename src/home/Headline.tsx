@@ -1,5 +1,5 @@
 import React from 'react';
-import MarkdownComponent  from "./MarkdownComponent";
+import MarkdownComponent  from "../global/MarkdownComponent";
 
 const Headline: React.FC = () => {
   return (

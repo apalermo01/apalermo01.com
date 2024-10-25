@@ -1,6 +1,6 @@
 import React from 'react';
-import MarkdownComponent from "./MarkdownComponent";
-import "./styles.css";
+import MarkdownComponent from "../global/MarkdownComponent";
+import "../global/styles.css";
 
 const About: React.FC = () => {
   return (
