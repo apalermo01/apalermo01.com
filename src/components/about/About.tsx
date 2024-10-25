@@ -1,12 +1,12 @@
 import React from 'react';
 import MarkdownComponent from "../global/MarkdownComponent";
-import "../global/styles.css";
+import "../global/globalStyles.css";
 
 const About: React.FC = () => {
   return (
    <div className="About boxStyle">
      <MarkdownComponent 
-       fileName = "/content/home/about.md"
+       fileName = "/content/about/about.md"
      />
     </div>
   )
