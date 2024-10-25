@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {parseMarkdown, markdownContent} from './MarkdownComponent';
+import {parseMarkdown, markdownContent} from '../global/MarkdownComponent';
 
 interface projectData {
   name: string;

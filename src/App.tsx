@@ -1,7 +1,7 @@
 import React from 'react';
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Nav from "./components/Nav"
+import Home from './home/Home'
+import Projects from './projects/Projects'
+import Nav from "./global/Nav"
 
 import {
   BrowserRouter,
