@@ -1,17 +1,19 @@
 import React from 'react';
-import './home.css';
+import './homeStyles.css';
 import Headline from "./Headline";
-import Socials from "../global/Socials";
-import About from "./About";
+import WhatIDo from "./WhatIDo";
 
 const Home: React.FC = () => {
   return (
     <div className="pageContainer">
-      <Socials /> 
-      <div className="pageTitle">Alex Palermo</div>
+      <h1 className="pageTitle">Alex Palermo</h1>
       <div className="contentContainer">
         <Headline />
-        <About />
+      </div>
+
+      <div className='whatIDoSection'>
+      <h1 className="pageTitle">What I Do</h1>
+      <WhatIDo />
       </div>
     </div>
   )

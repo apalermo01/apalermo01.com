@@ -16,7 +16,6 @@ const Projects: React.FC = () => {
 
   return (
   <div className="pageContainer">
-    <Socials />
     <div className="pageTitle">Projects</div>
     <div className="projectPageDescription">
        Here are some things that I've built in the past and that I'm building right now. 

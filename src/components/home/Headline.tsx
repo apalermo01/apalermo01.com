@@ -5,7 +5,7 @@ const Headline: React.FC = () => {
   return (
   <div className="headlineContainer boxStyle">
 
-    <img src={require("../assets/headshot_202105.jpg")}
+    <img src={require("../../assets/headshot 10-2024 web size 4 - cropped v2.jpg")}
          className="headshot"
          alt="headshot"
     />
