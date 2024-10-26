@@ -1,7 +1,6 @@
 import React from 'react';
 import './projects.css';
 import ProjectContainer from './ProjectContainer';
-import Socials from "../global/Socials"
 
 const projectList = [
   'knowledge_base',
