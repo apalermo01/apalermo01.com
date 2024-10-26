@@ -1,36 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import './homeStyles.css';
-import {parseMarkdown, markdownContent} from '../global/MarkdownComponent';
+import { parseMarkdown, markdownContent } from '../global/MarkdownComponent';
+import * as cheerio from "cheerio";
 
-interface elementData {
-  name: string
+interface whatIDoData {
+  header: string,
+  content: string
 }
 
-const WhatIDoElement: React.FC<elementData> = ({name}) => {
+const WhatIDo: React.FC = () => {
 
-  const [content, setContent] = useState<markdownContent>({'content': '', 'frontMatter': {}});
+  const [content, setContent] = useState<markdownContent>({ 'content': '', 'frontMatter': {} });
+  const [sections, setSections] = useState<whatIDoData[]>([]);
 
   useEffect(() => {
     const runParser = async () => {
-      const result = await parseMarkdown(name);
-      console.log(result);
+      const result = await parseMarkdown('content/home/home.md');
       setContent(result);
     };
 
     runParser();
-  }, [name])
-  return (
-    <div className='boxStyle'>
-      <div className='textDescription'>
-        {content ? <div dangerouslySetInnerHTML={{__html: content.content}} /> : <p>Loading...</p>}
-      </div>
-    </div>
-  )
-}
 
-const WhatIDo: React.FC = () => {
+    const $: cheerio.CheerioAPI = cheerio.load(content.content);
+    const $h1 = $('h1');
+    const headerSections: whatIDoData[] = [];
+
+    $h1.each((_, header) => {
+      headerSections.push({
+        'header': $(header).text(),
+        'content': $(header).next('p').text()
+      });
+    })
+
+    setSections(headerSections);
+  }, [content.content])
+
   return (
-    <WhatIDoElement name={'content/home/home.md'} />
+    <div className='whatIDo-grid'>
+      {sections.map((e) => (
+        <div className='boxStyle'>
+          <h1>{e.header}</h1>
+          <p>{e.content}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 

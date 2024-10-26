@@ -18,7 +18,12 @@
   margin-left: 20%;
 }
 
-@media (max-width: 1000px) {
+.whatIDo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1250px) {
   .headlineContainer {
     text-align: center;
   }
@@ -31,8 +36,13 @@
   .headshot {
     margin: auto
   }
+  .whatIDo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-@media (max-width: 500px) {
+
+@media (max-width: 750px) {
   .headlineContainer {
     display: block;
     text-align: center;
@@ -45,5 +55,10 @@
 
   .headshot {
     margin: auto
+  }
+
+  .whatIDo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
