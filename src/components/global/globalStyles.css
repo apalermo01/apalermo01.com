@@ -35,6 +35,25 @@
   src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
+body, header, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+}
+
+
 .navList {
   list-style-type: none;
   margin: 0;
@@ -45,6 +64,8 @@
 .navSection {
   width: 100%;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .navLink {
@@ -52,6 +73,7 @@
   display: inline-block;
   text-align: center;
   padding: 16px;
+  margin: 0px;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -62,6 +84,7 @@
   background-color: var(--ctp-mauve);
   color: var(--ctp-surface0);
 }
+
 
 .inactiveLink {
   color: var(--ctp-text);
@@ -107,9 +130,11 @@ a, a:hover, a:visited, a:focus, a:active {
 
 .socialContainer {
   padding: 5px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  /*justify-content: space-between;*/
+  /*grid-template-columns: 1fr 1fr;*/
 }
 
 .socials {
@@ -202,7 +227,10 @@ a, a:hover, a:visited, a:focus, a:active {
   .pageTitle {
     font-size: 2.5rem;
   }
-
+  .pageHeader {
+    flex-direction: column;
+    align-items: center;
+  }
   .projectList {
     display: grid;
     grid-template-columns: 1fr;
@@ -212,6 +240,21 @@ a, a:hover, a:visited, a:focus, a:active {
 
   .projectDescription {
     padding: 10px;
+  }
+  .navSection {
+    flex-grow: 1;
+  }
+  .socialContainer {
+    padding: 5px;
+    position: relative;
+    top: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px
+  }
+  .socials {
+    margin: 0 10px;
   }
 }
 
