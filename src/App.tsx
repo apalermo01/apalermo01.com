@@ -15,8 +15,10 @@ const App: React.FC = () => {
   return (
     <>
     <BrowserRouter>
-      <Nav />
-      <Socials />
+      <header className='pageHeader'>
+        <Nav />
+        <Socials />
+      </header>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
