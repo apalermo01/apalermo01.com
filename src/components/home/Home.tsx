@@ -2,6 +2,7 @@ import React from 'react';
 import './homeStyles.css';
 import Headline from "./Headline";
 import WhatIDo from "./WhatIDo";
+import SkillsContainer from './Skills';
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <div className='whatIDoSection'>
       <h1 className="pageTitle">What I Do</h1>
       <WhatIDo />
+      <SkillsContainer />
       </div>
     </div>
   )

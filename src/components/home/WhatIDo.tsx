@@ -34,7 +34,6 @@ const WhatIDo: React.FC = () => {
 
     setSections(headerSections);
   }, [content.content])
-
   return (
     <div className='whatIDo-grid'>
       {sections.map((e) => (
