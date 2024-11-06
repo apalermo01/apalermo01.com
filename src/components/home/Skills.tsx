@@ -43,7 +43,7 @@ const SkillsContainer: React.FC = () => {
     </div>
     <div className = 'additionalSkills boxStyle'>
       <h1 className = 'skillsTitle'>Additional Skills</h1>
-        <p>Languages: <SiTypescript/> Typescript,  <img src={require("../../assets/bxl-c-2.svg").default} className='icon'/></p>
+        <p>Languages: <SiTypescript/> Typescript,  <img src={require("../../assets/bxl-c-2.svg").default} alt="C Logo" className='icon'/></p>
         <p>Data Engineering: <SiGoogleappsscript/> Google App Script, <SiDbt/> DBT</p>
         <p>DevOps: <SiGithubactions/> Github Actions, <FaJenkins/> Jenkins, <FaDocker/> Docker</p>
         <p>Cloud: <SiGooglecloud /> Google Cloud, <SiAmazonec2 /> AWS, <LiaLinode /> Linode</p>
