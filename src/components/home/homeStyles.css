@@ -23,6 +23,26 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skillsTitle {
+  text-align: center;
+}
+
+.icon {
+  vertical-align: top;
+}
+
+.skillsContainer p {
+  font-size: 20px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  margin-right: 4px;
+}
+
 @media (max-width: 1250px) {
   .headlineContainer {
     text-align: center;
@@ -58,6 +78,12 @@
   }
 
   .whatIDo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+  .skillsContainer {
     display: grid;
     grid-template-columns: 1fr;
   }
