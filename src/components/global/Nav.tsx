@@ -16,6 +16,10 @@ const Nav: React.FC = () => {
     {
       path: '/projects',
       name: 'Projects'
+    },
+    {
+      path: '/Blog',
+      name: 'Blog'
     }
   ];
 
