@@ -39,6 +39,7 @@ const WhatIDo: React.FC = () => {
       {sections.map((e) => (
         <div className='boxStyle'>
           <h1>{e.header}</h1>
+          <br></br>
           <p>{e.content}</p>
         </div>
       ))}

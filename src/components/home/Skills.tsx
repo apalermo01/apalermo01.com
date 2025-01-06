@@ -37,14 +37,14 @@ const SkillsContainer: React.FC = () => {
     <div className = 'coreSkills boxStyle'>
       <h1 className = 'skillsTitle'>Core Skills</h1>
         <p>Languages: <FaPython/> Python, <FaDatabase/> SQL, <IoLogoJavascript/> Javascript</p>
-        <p>Data Engineering: <RiFlowChart /> ETL Pipelines, <BiLogoPostgresql/> Postgres, <TbBrandGoogleBigQuery/> Bigquery</p>
+        <p>Data Engineering: <RiFlowChart /> ETL Pipelines, <BiLogoPostgresql/> Postgres, <TbBrandGoogleBigQuery/> Bigquery, <SiDbt/> DBT</p>
         <p>DevOps: <FaGitAlt /> Git, <FaGithub /> Github</p>
         <p>Frontend: <SiRetool/> Retool, <SiPowerbi /> Power BI</p>
     </div>
     <div className = 'additionalSkills boxStyle'>
       <h1 className = 'skillsTitle'>Additional Skills</h1>
         <p>Languages: <SiTypescript/> Typescript,  <img src={require("../../assets/bxl-c-2.svg").default} alt="C Logo" className='icon'/></p>
-        <p>Data Engineering: <SiGoogleappsscript/> Google App Script, <SiDbt/> DBT</p>
+        <p>Data Engineering: <SiGoogleappsscript/> Google App Script</p>
         <p>DevOps: <SiGithubactions/> Github Actions, <FaJenkins/> Jenkins, <FaDocker/> Docker</p>
         <p>Cloud: <SiGooglecloud /> Google Cloud, <SiAmazonec2 /> AWS, <LiaLinode /> Linode</p>
         <p>Frontend: <FaReact /> React</p>

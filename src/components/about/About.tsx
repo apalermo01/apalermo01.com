@@ -1,6 +1,7 @@
 import React from 'react';
 import MarkdownComponent from "../global/MarkdownComponent";
 import "../global/globalStyles.css";
+import "./about.css";
 import Headline from "../home/Headline";
 
 const About: React.FC = () => {
