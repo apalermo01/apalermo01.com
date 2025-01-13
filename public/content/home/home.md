@@ -1,16 +1,15 @@
-# Data Automations
-I design and optimize data pipelines that ensure reliable and scalable data flows.
-I design, build, and optimize data infrastructure, specializing in ETL processes that ensure reliable and scalable data flows.
+# Data-Centric Application Development
+
+I build end-to-end data products that are both scalable and user-friendly, bridging back-end data engineering, front-end development, and data science. Most recently, I’ve delivered internal tools that help performance marketing analysts measure and categorize advertising efforts for 100+ clients with diverse needs.
+
+# Data Automation & Infrastructure
+
+I design, build, and optimize data pipelines that ensure reliable, scalable data flows—whether it’s orchestrating ETL processes, integrating multiple APIs, or configuring cloud resources. My focus is on sustainability and efficiency, so teams can confidently rely on well-structured, accurate data.
 
 # Enable Data Strategy & Insights
-I partner with stakeholders to turn business requirements into data solutions, ensuring that technical implementations align with strategic goals.
 
-
-# Full-stack Development for Data Applications
-I use my diverse skillset to bridge gaps between data engineering, data science, and frontend development to surface data products in a scalable and user-friendly way.
-
-# Tutoring & Mentorship
-I help a diverse range of students ranging from undergraduates to doctoral students and startup founders to break into programming, data science, and advise on projects.
+I collaborate with stakeholders to translate business requirements into actionable data solutions, ensuring that technical implementations align with strategic goals. By facilitating cross-team communication and requirements gathering, I enable organizations to make data-driven decisions with clarity.
 
 # Always Learning
-I am a firm believer that if you're not constantly learning, then you're falling behind. I'm always looking to expand my skillset beyond my day-to-day work in data engineering. My drive to understand technology at a deeper level has led to a growing interest in low-level systems development and security research, areas that align with my curiosity and broad knowledge base.
+
+I believe lifelong learning is key to staying at the forefront of technology (and keeping life interesting). Beyond my core work in data engineering, I’m exploring low-level systems and security research to deepen my understanding of how things work under the hood. Along the way, I mentor students and colleagues, helping them master new skills and tackle complex projects.
