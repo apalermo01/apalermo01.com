@@ -1,0 +1,36 @@
+name: test deployment to sever
+
+on:
+  push:
+    branches: [ test ]
+  workflow_dispatch:
+
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+  
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+  
+    - name: Install dependencies
+      run: npm install
+  
+    - name: Build
+      run: npm run build
+
+    - name: Copy files via ssh
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        password: ${{ secrets.PASSWORD }}
+        source: "build/"
+        target: "/var/www/test.apalermo01.com/"
