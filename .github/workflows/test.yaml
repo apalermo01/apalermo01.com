@@ -1,8 +1,8 @@
-name: deploy to server
+name: test deployment to sever
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
   workflow_dispatch:
 
 
@@ -33,4 +33,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.PASSWORD }}
         source: "build/"
-        target: "/var/www/apalermo01.com/"
+        target: "/var/www/test.apalermo01.com/"
